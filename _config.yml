@@ -1,0 +1,7 @@
+title: Phun PHP Framework
+description: Let get phun together
+baseurl: ""
+url: ""
+markdown: kramdown
+theme: minima
+permalink: /:categories/:title.html
