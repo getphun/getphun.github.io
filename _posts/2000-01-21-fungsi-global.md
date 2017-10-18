@@ -18,6 +18,7 @@ dijalankan. Di bawah ini adalah fungsi-fungsi tersebut:
 1. [module_exists](#moduleexists)
 1. [object_replace](#objectreplace)
 1. [prop_as_key](#propaskey)
+1. [strtoslug](#strtoslug)
 
 ## alt
 
@@ -172,3 +173,20 @@ sendiri. Salah satu penggunaan fungsi ini adalah untuk menjadikan id row table
 menjadi array key, dan nilainya row table itu sendiri. Jika dibutuhkan mengubah
 properti array menjadi array key, dan salam satu properti lainnya menjadi nilai
 array, maka gunakan fungsi `array_column`.
+
+## strtoslug
+
+```php
+<?php
+/**
+ * @param string $str String yang akan di proses
+ * @return string Versi slug dari $str
+ */
+strtoslug($str)
+```
+
+Fungsi untuk mengubah suatu string menjadi berbentuk slug, yaitu string yang hanya
+terdiri dari karakter `a-z`, `0-9`, dan `-`. Semua karakter selain kararakter
+yang diterima akan diubah menjadi karakter `-`, dan karakter `-` yang beradar di 
+awal string atau di akhir string akan dihapus. Karakter `-` yang berdampingan
+juga akan diubah menjadi satu saja.
