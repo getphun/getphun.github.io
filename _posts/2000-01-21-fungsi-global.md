@@ -8,16 +8,17 @@ Module core membawa beberapa fungsi global yang terload setiap kali aplikasi
 dijalankan. Di bawah ini adalah fungsi-fungsi tersebut:
 
 1. [alt](#alt)
-1. [autoload_class_exists](#autoloadclassexists)
-1. [calculate_pagination](#calculatepagination)
+1. [autoload_class_exists](#autoload_class_exists)
+1. [calculate_pagination](#calculate_pagination)
 1. [deb](#deb)
-1. [group_by_prop](#groupbyprop)
+1. [group_by_prop](#group_by_prop)
+1. [group_per_column](#group_per_column)
 1. [hs](#hs)
-1. [is_dev](#isdev)
-1. [is_indexed_array](#isindexedarray)
-1. [module_exists](#moduleexists)
-1. [object_replace](#objectreplace)
-1. [prop_as_key](#propaskey)
+1. [is_dev](#is_dev)
+1. [is_indexed_array](#is_indexed_array)
+1. [module_exists](#module_exists)
+1. [object_replace](#object_replace)
+1. [prop_as_key](#prop_as_key)
 1. [strtoslug](#strtoslug)
 
 ## alt
@@ -86,6 +87,21 @@ group_by_prop($arr, $prop)
 Fungsi yang bertugas mengelompokkan anggota array ke dalam propertinya. Fungsi ini
 akan mengembalikan array dimana key nya adalah properti pengelompokan, dan nilai
 nya adalah array anggota kelompok yang tergabung ke kelopong tersebut.
+
+## group_per_column
+
+```php
+<?php
+/**
+ * @param array $list Array sumber data
+ * @param integer $column Total kolom/item per group
+ * @return array multi-level array
+ */
+group_per_column($list[, $column=3]);
+```
+
+Fungsi yang mengubah list array menjadi array dengan pengelompokan, dimana
+masing-masing kelompok terdiri dari sebanyak `$column` item.
 
 ## hs
 
